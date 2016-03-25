@@ -1,0 +1,25 @@
+{
+  "name": "notetaker",
+  "description": "A Notetaker app",
+  "main": "index.js",
+  "authors": [
+    "Sachin Mour"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "notetaker",
+    "react"
+  ],
+  "homepage": "https://github.com/sachinmour/notetaker-react",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
