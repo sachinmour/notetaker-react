@@ -5,6 +5,7 @@ var UserProfile = require("./Github/UserProfile");
 var Notes = require("./Notes/Notes");
 var ReactFireMixin = require("reactfire");
 var Firebase = require("firebase");
+var helpers = require("../utils/helpers.js");
 
 var Profile = React.createClass({
   mixins: [ReactFireMixin],
@@ -23,6 +24,14 @@ var Profile = React.createClass({
     this.ref = new Firebase('https://incandescent-fire-4223.firebaseio.com/');
     var childRef = this.ref.child(this.props.params.username);
     this.bindAsArray(childRef, 'notes');
+    
+    helpers.getGithubInfo(this.props.params.username)
+      .then(function (data) {
+        this.setState({
+          bio: data.bio,
+          repos: data.repos
+        });
+      }.bind(this));
   },
   
   componentWillUnmount: function () {
@@ -38,7 +47,7 @@ var Profile = React.createClass({
     return (
       <div className="row">
         <div className="col-md-4">
-          <UserProfile  bio={this.state.bio} />
+          <UserProfile  bio={this.state.bio} username={this.props.params.username} />
         </div>
         <div className="col-md-4">
           <Repos username={this.props.params.username} repos={this.state.repos} />

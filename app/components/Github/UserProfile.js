@@ -8,6 +8,7 @@ var UserProfiles = React.createClass({
   },
   
   render: function () {
+    console.log("BIO", this.props.bio);
     return (
       <div>
         <p> Username: {this.props.username} </p>
