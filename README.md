@@ -1,2 +1,4 @@
 # notetaker-react
-# Use GitHub public api
+Using GitHub public api
+
+Learned through egghead
