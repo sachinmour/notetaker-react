@@ -17,16 +17,6 @@ class Profile extends React.Component {
     };
   }
   
-  getInitialState() {
-    return {
-      notes: [1, 2, 3],
-      repos: ['a', 'b', 'c'],
-      bio: {
-        name: "Sachin Mour"
-      }
-    };
-  }
-  
   componentDidMount() {
     this.init(this.props.params.username);
   }
