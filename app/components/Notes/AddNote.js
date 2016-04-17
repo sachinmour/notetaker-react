@@ -1,6 +1,6 @@
 import React from "react";
 
-class AddNote extends React.component {
+class AddNote extends React.Component {
   
   setRef(ref) {
     this.note = ref;
@@ -29,4 +29,4 @@ AddNote.PropTypes = {
   addNote: React.PropTypes.func.isRequired
 };
 
-module.exports = AddNote;
+export default AddNote;
