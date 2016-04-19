@@ -2,9 +2,11 @@
   "name": "notetaker",
   "version": "1.0.0",
   "description": "A Notetaker app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "webpack -p --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -22,12 +24,16 @@
   "homepage": "https://github.com/sachinmour/notetaker-react#readme",
   "dependencies": {
     "axios": "^0.9.1",
+    "express": "^4.13.4",
     "firebase": "^2.4.1",
+    "path": "^0.12.7",
     "re-base": "^1.5.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-router": "^2.2.4",
-    "reactfire": "^0.6.0"
+    "reactfire": "^0.6.0",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
